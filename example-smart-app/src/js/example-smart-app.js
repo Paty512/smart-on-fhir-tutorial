@@ -47,7 +47,7 @@ var dia_loinc ="8462-4";
           var diastolicbp = getBloodPressureValue(byCodes(bp_loinc),dia_loinc);
           var hdl = byCodes('2085-9');
           var ldl = byCodes('2089-1');
-          var body = byCodes ('8310-5);
+          var body = byCodes ('8310-5');
 
           var p = defaultPatient();
           p.birthdate = patient.birthDate;
