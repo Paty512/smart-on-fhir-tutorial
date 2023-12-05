@@ -30,6 +30,7 @@ var alg = smart.patient.api.fetchall({
   "type": 'Alleryintolerance',
   "query"; (
   "clinical-status": 'active'
+      });
         
         $.when(pt, obv, alg).fail(onError);
 
