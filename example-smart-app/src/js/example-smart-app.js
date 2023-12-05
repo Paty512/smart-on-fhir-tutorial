@@ -1,3 +1,6 @@
+var bp_loinc ="85354-9";
+var sys_loinc ="8480-6";
+var dia_loionc ="8462-4";
 (function(window){
   window.extractData = function() {
     var ret = $.Deferred();
@@ -19,7 +22,7 @@
                           'http://loinc.org|8302-2', //body height
                           'http://loinc.org|2085-9', //HDL
                           'http://loinc.org|2089-1', //LDL
-                          'http://loinc.org|85354-9'] //blood pressure
+                          'http://loinc.org|'+bp_loinc] //blood pressure
                       },
                       date: 'gt1980-01-01'
                     }
@@ -40,8 +43,8 @@
           }
 
           var height = byCodes('8302-2');
-          var systolicbp = getBloodPressureValue(byCodes('85354-9'),'8480-6');
-          var diastolicbp = getBloodPressureValue(byCodes('85354-9'),'8462-4');
+          var systolicbp = getBloodPressureValue(byCodes(bp_loinc),sys_loinc);
+          var diastolicbp = getBloodPressureValue(byCodes(bp_loinc),dia_loinc);
           var hdl = byCodes('2085-9');
           var ldl = byCodes('2089-1');
 
