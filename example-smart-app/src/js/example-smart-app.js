@@ -22,8 +22,8 @@ var dia_loinc ="8462-4";
                           'http://loinc.org|8302-2', //body height
                           'http://loinc.org|2085-9', //HDL
                           'http://loinc.org|2089-1', //LDL
-                          'http://loinc.org|'+bp_loinc] //blood pressure
-                      },
+                          'http://loinc.org|'+bp_loinc', //blood pressure
+                          'http://loinc.org|8310-5]// body temp                      },
                       date: 'gt1980-01-01'
                     }
                   });
