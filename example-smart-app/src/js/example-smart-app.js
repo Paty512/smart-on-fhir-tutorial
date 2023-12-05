@@ -34,7 +34,7 @@ var dia_loinc ="8462-4";
                     }
            })
                     
-        $.when(pt, obv, alg).done(function(patient, obv, allergies) 
+        $.when(pt, obv, alg).done(function(patient, obv, allergies) {
           console.log(patient);
           console.log(obv);
           console.log(allergies);
