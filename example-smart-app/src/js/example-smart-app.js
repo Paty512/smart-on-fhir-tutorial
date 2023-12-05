@@ -38,6 +38,8 @@ var dia_loinc ="8462-4";
           console.log(patient);
           console.log(obv);
           console.log(allergies);
+          var p = defaultPatient();
+          for(let i = 0; i < allergies.length; i++){p.allergies += allergies[i].code.text +"<br>";}
           
           var byCodes = smart.byCodes(obv, 'code');
           var gender = patient.gender;
@@ -57,7 +59,7 @@ var dia_loinc ="8462-4";
           var ldl = byCodes('2089-1');
           var body = byCodes ('8310-5');
 
-          var p = defaultPatient();
+          
           p.birthdate = patient.birthDate;
           p.gender = gender;
           p.fname = fname;
@@ -98,6 +100,7 @@ var dia_loinc ="8462-4";
       diastolicbp: {value: ''},
       ldl: {value: ''},
       hdl: {value: ''},
+      allergies: {value: ''}
     };
   }
 
@@ -142,6 +145,7 @@ var dia_loinc ="8462-4";
     $('#ldl').html(p.ldl);
     $('#hdl').html(p.hdl);
     $('#body').html(p.body);
+    $('#allergies').html(p.allergies)
   };
 
 })(window);
