@@ -17,7 +17,7 @@ var dia_loinc ="8462-4";
         var obv = smart.patient.api.fetchAll({
                     type: 'Observation',
                     query: {
-                       {
+                       
                         $or: [
                           'http://loinc.org|8302-2', //body height
                           'http://loinc.org|2085-9', //HDL
