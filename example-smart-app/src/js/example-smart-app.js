@@ -17,7 +17,7 @@ var dia_loinc ="8462-4";
         var obv = smart.patient.api.fetchAll({
                     type: 'Observation',
                     query: {
-                      code: {
+                       {
                         $or: [
                           'http://loinc.org|8302-2', //body height
                           'http://loinc.org|2085-9', //HDL
@@ -25,12 +25,20 @@ var dia_loinc ="8462-4";
                           'http://loinc.org|+bp_loinc', //blood pressure
                           'http://loinc.org|8310-5'] //body temp
                     },date:'gt1980-01-01'}
+        });
                       
-        
-        $.when(pt, obv).fail(onError)
-
-        $.when(pt, obv).done(function(patient, obv) {
-         
+           var obv = smart.patient.api.fetchAll({
+                    type: 'AllergyIntolerance',
+                    query: {
+                      "clinical-status": "active"
+                    }
+           })
+                    
+        $.when(pt, obv, alg).done(function(patient, obv, alg) {
+         console.log(patient);
+          console.log(obv);
+          console.log(allergies);
+          
           var byCodes = smart.byCodes(obv, 'code');
           var gender = patient.gender;
 
