@@ -1,6 +1,6 @@
 var bp_loinc ="85354-9";
 var sys_loinc ="8480-6";
-var dia_loionc ="8462-4";
+var dia_loinc ="8462-4";
 (function(window){
   window.extractData = function() {
     var ret = $.Deferred();
