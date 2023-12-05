@@ -27,14 +27,14 @@ var dia_loinc ="8462-4";
                     },date:'gt1980-01-01'
         });
                       
-           var obv = smart.patient.api.fetchAll({
+           var alg = smart.patient.api.fetchAll({
                     type: 'AllergyIntolerance',
                     query: {
                       "clinical-status": "active"
                     }
            })
                     
-        $.when(pt, obv, alg).done(function(patient, obv, alg) 
+        $.when(pt, obv, alg).done(function(patient, obv, allergies) 
           console.log(patient);
           console.log(obv);
           console.log(allergies);
