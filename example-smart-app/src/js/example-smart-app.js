@@ -26,9 +26,10 @@ var dia_loinc ="8462-4";
                           'http://loinc.org|8310-5'] //body temp
                     },date:'gt1980-01-01'}
                       
-var alg = smart.patient.api.fetchall({
+var alg = smart.patient.api.fetchall(
   "type": 'Alleryintolerance',
-  "query"; (
+  "query"; 
+        )
   "clinical-status": 'active'
       });
         
