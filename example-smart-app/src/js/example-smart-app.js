@@ -39,6 +39,7 @@ var dia_loinc ="8462-4";
           console.log(obv);
           console.log(allergies);
           var p = defaultPatient();
+          p.allergies="";
           for(let i = 0; i < allergies.length; i++){p.allergies += allergies[i].code.text +"<br>";}
           
           var byCodes = smart.byCodes(obv, 'code');
