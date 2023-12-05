@@ -26,19 +26,11 @@ var dia_loinc ="8462-4";
                           'http://loinc.org|8310-5'] //body temp
                     },date:'gt1980-01-01'}
                       
-var alg = smart.patient.api.fetchAll({
-  "type": 'Alleryintolerance',
-  "query"; 
-        )
-  "clinical-status": 'active'
-      });
         
-        $.when(pt, obv, alg).fail(onError);
+        $.when(pt, obv).fail(onError);
 
-        $.when(pt, obv, alg).done(function(patient, obv, allergies) {
-          console.log(patient);
-          consoloe.log(obv);
-          console.log(allergies);
+        $.when(pt, obv).done(function(patient, obv) {
+         
           var byCodes = smart.byCodes(obv, 'code');
           var gender = patient.gender;
 
