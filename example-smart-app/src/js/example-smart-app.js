@@ -27,7 +27,7 @@ var dia_loinc ="8462-4";
                     },date:'gt1980-01-01'}
                       
         
-        $.when(pt, obv).fail(onError);
+        $.when(pt, obv).fail(onError)
 
         $.when(pt, obv).done(function(patient, obv) {
          
